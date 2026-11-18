@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nina Legro Cuéllar · Portafolio</title>
+<meta name="description" content="Portafolio de Nina Legro Cuéllar: Community Manager y creadora de contenido digital. Reels, carruseles, piezas gráficas, estrategia en redes e identidad de marca.">
+<meta property="og:title" content="Nina Legro Cuéllar · Portafolio">
+<meta property="og:description" content="Community Manager · Marketing digital · Creación de contenido">
+<meta property="og:image" content="thumbs/1FFdFLiPnuLxa9ddBZsZjfGpuayDiPhm6.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f7f2ea; --ink:#1f2a24; --muted:#6b6f68; --green:#2f5d3a; --orange:#e9822e;
+    --card:#fffdf9; --line:#e6ddd0; --radius:18px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+
+  /* Nav */
+  nav{position:sticky;top:0;z-index:20;background:rgba(247,242,234,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{font-family:Fraunces,serif;font-weight:600;font-size:1.25rem;text-decoration:none}
+  .logo span{color:var(--orange)}
+  nav ul{display:flex;gap:28px;list-style:none;font-size:.92rem}
+  nav ul a{text-decoration:none;color:var(--muted)} nav ul a:hover{color:var(--ink)}
+
+  /* Hero */
+  .hero{padding:88px 0 64px;display:grid;grid-template-columns:1.3fr 1fr;gap:56px;align-items:center}
+  .eyebrow{display:inline-block;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--green);font-weight:600;margin-bottom:18px}
+  h1{font-family:Fraunces,serif;font-weight:400;font-size:clamp(2.6rem,6vw,4.6rem);line-height:1.02;letter-spacing:-.02em}
+  h1 em{color:var(--orange);font-style:italic}
+  .lead{margin-top:22px;font-size:1.12rem;color:var(--muted);max-width:34em}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+  .tags span{border:1px solid var(--line);background:var(--card);padding:6px 14px;border-radius:99px;font-size:.85rem}
+  .cta{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:99px;font-weight:500;font-size:.95rem;text-decoration:none;transition:.2s}
+  .btn-primary{background:var(--ink);color:#fff} .btn-primary:hover{background:var(--green)}
+  .btn-ghost{border:1px solid var(--ink)} .btn-ghost:hover{background:var(--ink);color:#fff}
+  .collage{position:relative;height:520px}
+  .collage img{position:absolute;border-radius:var(--radius);box-shadow:0 24px 50px -20px rgba(31,42,36,.45);object-fit:cover;border:6px solid #fff}
+  .collage img:nth-child(1){width:58%;left:0;top:30px;transform:rotate(-4deg)}
+  .collage img:nth-child(2){width:52%;right:0;top:0;transform:rotate(5deg)}
+  .collage img:nth-child(3){width:50%;left:24%;bottom:0;transform:rotate(-1deg)}
+
+  /* Stats */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .stats div{padding:28px 8px;text-align:center}
+  .stats div+div{border-left:1px solid var(--line)}
+  .stats b{display:block;font-family:Fraunces,serif;font-size:2.3rem;font-weight:400;color:var(--green)}
+  .stats small{color:var(--muted);font-size:.88rem}
+
+  /* Work */
+  section.work{padding:80px 0}
+  .head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:32px}
+  h2{font-family:Fraunces,serif;font-weight:400;font-size:clamp(2rem,4vw,2.8rem);letter-spacing:-.01em}
+  .filters{display:flex;gap:8px;flex-wrap:wrap}
+  .filters button{font:inherit;font-size:.88rem;border:1px solid var(--line);background:var(--card);padding:8px 16px;border-radius:99px;cursor:pointer;transition:.15s}
+  .filters button:hover{border-color:var(--ink)}
+  .filters button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .grid{columns:3 300px;column-gap:22px}
+  .item{break-inside:avoid;margin-bottom:22px;background:var(--card);border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);cursor:pointer;transition:transform .25s,box-shadow .25s;display:block;width:100%;text-align:left;font:inherit;color:inherit;padding:0}
+  .item:hover{transform:translateY(-4px);box-shadow:0 18px 40px -22px rgba(31,42,36,.5)}
+  .item:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+  .thumb{position:relative;overflow:hidden;background:#ece5da}
+  .thumb img{width:100%;height:auto;display:block;transition:transform .5s}
+  .item:hover .thumb img{transform:scale(1.03)}
+  .badge{position:absolute;top:12px;left:12px;background:rgba(255,255,255,.92);font-size:.75rem;font-weight:600;padding:4px 10px;border-radius:99px}
+  .play{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none}
+  .play i{width:62px;height:62px;border-radius:50%;background:rgba(255,255,255,.9);display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+  .play i::after{content:"";border-left:18px solid var(--ink);border-top:11px solid transparent;border-bottom:11px solid transparent;margin-left:5px}
+  .info{padding:16px 18px 18px}
+  .info h3{font-size:1rem;font-weight:600;line-height:1.3}
+  .info p{font-size:.86rem;color:var(--muted);margin-top:4px}
+  .item.hide{display:none}
+
+  /* About */
+  .about{background:var(--green);color:#f4efe6;padding:88px 0}
+  .about .wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:56px;align-items:start}
+  .about h2 em{color:#f7b26b}
+  .about p{color:#dbe4dc;font-size:1.05rem}
+  .skills{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px}
+  .skills div{border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:16px 18px}
+  .skills b{display:block;font-weight:600;color:#fff;margin-bottom:2px}
+  .skills small{color:#c4d1c6;font-size:.86rem}
+
+  footer{padding:56px 0;text-align:center}
+  footer h2{margin-bottom:12px}
+  footer p{color:var(--muted);margin-bottom:24px}
+  footer .cta{justify-content:center}
+  .fine{margin-top:40px;font-size:.8rem;color:var(--muted)}
+
+  /* Viewer */
+  dialog{border:0;padding:0;background:transparent;max-width:none;max-height:none;width:100vw;height:100vh;margin:0}
+  dialog::backdrop{background:rgba(20,26,22,.88);backdrop-filter:blur(6px)}
+  .viewer{display:flex;flex-direction:column;height:100%;padding:18px;gap:12px}
+  .vbar{display:flex;justify-content:space-between;align-items:center;color:#fff;gap:16px}
+  .vbar h3{font-family:Fraunces,serif;font-weight:400;font-size:1.3rem}
+  .vbar small{color:#b9c2bb;display:block;font-family:Inter;font-size:.82rem}
+  .vact{display:flex;gap:8px;flex-shrink:0}
+  .vact a,.vact button{font:inherit;font-size:.86rem;color:#fff;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:99px;padding:8px 14px;cursor:pointer;text-decoration:none}
+  .vact a:hover,.vact button:hover{background:rgba(255,255,255,.25)}
+  .frame{flex:1;display:flex;justify-content:center;min-height:0}
+  .frame iframe{border:0;border-radius:14px;background:#111;width:100%;max-width:1100px;height:100%}
+  .frame.vertical iframe{max-width:min(480px,100%)}
+
+  @media (max-width:860px){
+    nav ul{display:none}
+    .hero{grid-template-columns:1fr;padding-top:48px}
+    .collage{height:380px}
+    .stats{grid-template-columns:repeat(2,1fr)}
+    .stats div:nth-child(3){border-left:0}
+    .stats div:nth-child(n+3){border-top:1px solid var(--line)}
+    .about .wrap{grid-template-columns:1fr}
+    .vbar{flex-direction:column;align-items:flex-start}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#">Nina Legro<span>.</span></a>
+    <ul>
+      <li><a href="#trabajo">Trabajo</a></li>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="wrap hero">
+  <div>
+    <span class="eyebrow">Portafolio · Community Manager & Marketing digital</span>
+    <h1>Nina Legro Cuéllar.<br><em>Contenido que conecta</em> con las personas.</h1>
+    <p class="lead">Community Manager y creadora de contenido digital. Diseño y produzco reels, carruseles, campañas promocionales e identidad visual para cualquier tipo de marca. Hoy mi trabajo se centra en el sector turismo.</p>
+    <div class="tags">
+      <span>Community Management</span><span>Reels & video</span><span>Diseño gráfico</span><span>Copywriting</span><span>Meta Ads</span><span>Branding</span>
+    </div>
+    <div class="cta">
+      <a class="btn btn-primary" href="#trabajo">Ver mi trabajo →</a>
+      <a class="btn btn-ghost" href="https://drive.google.com/drive/folders/13e5z76kPhIqhOlMnxFXEa55AOftroiNf" target="_blank" rel="noopener">Carpeta en Drive</a>
+    </div>
+  </div>
+  <div class="collage" aria-hidden="true">
+    <img src="thumbs/1FFdFLiPnuLxa9ddBZsZjfGpuayDiPhm6.jpg" alt="">
+    <img src="thumbs/16nm2bjElMo7AEzwSiRPsrmwi4L6YMBQM.jpg" alt="">
+    <img src="thumbs/1pQAlQNQAihAOtN-x_TYi5syPvPxfvTQk.jpg" alt="">
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="stats">
+    <div><b data-count="video">0</b><small>Reels y videos</small></div>
+    <div><b data-count="carrusel">0</b><small>Carruseles</small></div>
+    <div><b data-count="grafica">0</b><small>Piezas gráficas</small></div>
+    <div><b data-count="marca">0</b><small>Proyectos de marca</small></div>
+  </div>
+</div>
+
+<section class="work wrap" id="trabajo">
+  <div class="head">
+    <h2>Trabajo seleccionado</h2>
+    <div class="filters" role="group" aria-label="Filtrar por categoría">
+      <button class="on" data-f="all">Todo</button>
+      <button data-f="video">Reels</button>
+      <button data-f="carrusel">Carruseles</button>
+      <button data-f="grafica">Piezas gráficas</button>
+      <button data-f="marca">Marca e interno</button>
+    </div>
+  </div>
+  <div class="grid" id="grid"></div>
+</section>
+
+<section class="about" id="sobre-mi">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow" style="color:#f7b26b">Sobre mí</span>
+      <h2>Ideas que se vuelven <em>contenido que funciona</em>.</h2>
+    </div>
+    <div>
+      <p>Me encargo de la comunicación de una marca de principio a fin: la idea y el guion de cada video, el diseño de las piezas, el análisis de la competencia y la identidad visual del equipo. Lo que hago sirve para cualquier industria y se adapta al tono de cada marca.</p><p style="margin-top:14px">Actualmente trabajo en <b style="color:#fff">Turismauro</b> como Community Manager y Coordinadora de Viajes, así que la mayoría de las piezas de este portafolio son de turismo.</p>
+      <div class="skills" style="margin-top:28px">
+        <div><b>Video corto</b><small>Guion, grabación y edición de reels verticales</small></div>
+        <div><b>Diseño para redes</b><small>Carruseles, stories, posts y flyers promocionales</small></div>
+        <div><b>Estrategia digital</b><small>Benchmark y análisis de campañas en Meta Ads</small></div>
+        <div><b>Identidad de marca</b><small>Carnets, fotos de perfil y firmas corporativas</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap" id="contacto">
+  <h2>¿Trabajamos juntos?</h2>
+  <p>Todo el material original está disponible en alta calidad en Google Drive.</p>
+  <div class="cta">
+    <a class="btn btn-primary" href="https://drive.google.com/drive/folders/13e5z76kPhIqhOlMnxFXEa55AOftroiNf" target="_blank" rel="noopener">Abrir portafolio completo en Drive</a>
+  </div>
+  <p class="fine">© <span id="y"></span> Nina Legro Cuéllar</p>
+</footer>
+
+<dialog id="viewer" aria-label="Visor de piezas">
+  <div class="viewer">
+    <div class="vbar">
+      <h3 id="vt"><small id="vm"></small></h3>
+      <div class="vact">
+        <a id="vd" href="#" target="_blank" rel="noopener">Abrir en Drive ↗</a>
+        <button id="vc" type="button">Cerrar ✕</button>
+      </div>
+    </div>
+    <div class="frame" id="vf"></div>
+  </div>
+</dialog>
+
+<script>
+// type: video | carrusel | grafica | marca. id = Google Drive file id (also thumbnail filename).
+const ITEMS = [
+  {id:"16nm2bjElMo7AEzwSiRPsrmwi4L6YMBQM", t:"Agencias Brigitte", d:"Reel · 0:48", type:"video"},
+  {id:"1NooShoDCD_34KVLKtnLotzkPtsTAD5i2", t:"#DestinoPorConocer", d:"Reel · 0:20", type:"video"},
+  {id:"1ivQ3yCpr1wJUo9spGmD6FJz7sj0A_e_K", t:"Destinos Colombia, parte 1", d:"Reel · 1:08", type:"video"},
+  {id:"1Z7_qxpW5pzUF18U3S1cxJ8KsVOfsNJv-", t:"Este año no voy a viajar", d:"Reel · 1:02", type:"video"},
+  {id:"1d_2QIRTzpk3qDmXYMzl41yxZiD-JYJjo", t:"Fin de año", d:"Reel · 0:45", type:"video"},
+  {id:"15uCK0tmTkoQthsBYDG4N6l75WqbwjeAe", t:"Hay lugares que parecen sacados de un sueño", d:"Reel · 0:24", type:"video"},
+  {id:"1MmrscqOcXJ7m7ATnPZf1lvA4bparii4g", t:"Termales: ¿te imaginas pasar un día aquí?", d:"Reel · 0:27", type:"video"},
+  {id:"1FC4CboB00cKnZmJOJEiDkP--nkT5qbBt", t:"Semana de receso", d:"Reel · 0:44", type:"video"},
+  {id:"1VPrjzzMz8ol9C2kD84PGisi68ehmKdtB", t:"¿Ya sabes cuál es tu próxima aventura?", d:"Reel · 0:33", type:"video"},
+  {id:"1vVD_0zkt-nYDmBzY3VCAYDLl_JRoL7xm", t:"Día Internacional del Café", d:"Carrusel animado · 1:00", type:"carrusel", video:true},
+  {id:"1dPQp_4iVSpnReqqQkZsnoynqGbKUg8Wb", t:"Datos curiosos de Colombia", d:"Carrusel · 6 láminas", type:"carrusel"},
+  {id:"1pylfGNI-pMsgkrs20joTxwey31W0gvOW", t:"No lo decimos nosotros", d:"Carrusel de testimonios · 6 láminas", type:"carrusel"},
+  {id:"1pQAlQNQAihAOtN-x_TYi5syPvPxfvTQk", t:"¿Cómo encontrar el amor de tu vida?", d:"Carrusel · 3 láminas", type:"carrusel"},
+  {id:"1BdUpvd5xFhQivxtlEb0M2fN8tNuOh8By", t:"Abre la foto", d:"Carrusel interactivo · 3 láminas", type:"carrusel"},
+  {id:"1FFdFLiPnuLxa9ddBZsZjfGpuayDiPhm6", t:"Eje Cafetero, 4 días 3 noches", d:"Flyer promocional", type:"grafica"},
+  {id:"1gcMQPhEUqaqXzt9Cz453AMvkC_LGgbzF", t:"Bono de $50.000: reserva hoy", d:"Campaña · 8 piezas", type:"grafica"},
+  {id:"1oTxHHvoY9FJsVN65tkOQMAlccp6jy8Hp", t:"¿A dónde te llevarías…?", d:"Stories · 4 piezas", type:"grafica"},
+  {id:"1Lj0luH1f68F1mpy0ckQD2tx5IkqMhRUv", t:"¿Te ves más feliz?", d:"Post para redes", type:"grafica"},
+  {id:"1MyS-Y64ZTGzvfKO9LQnXH1Iw4v_SfdWr", t:"Después de unos días en el Eje Cafetero…", d:"Post para redes", type:"grafica"},
+  {id:"1mPfaV2vyj5KDvDnt5lO95picDbLH6azV", t:"Benchmark Meta Ads", d:"Análisis de competencia · 8 láminas", type:"marca"},
+  {id:"1WOWb37ZWhyKuc2xn6CWN8bypXTQ6qo1y", t:"Equipo de trabajo: fotos de perfil", d:"Identidad interna · 18 piezas", type:"marca"},
+  {id:"1joH12cAfmzkocIEZOAo-XUqQeTVhXrLf", t:"Firmas de correo corporativas", d:"Identidad interna · 11 firmas", type:"marca"},
+  {id:"1d0QorY7p3fPto2IMEegBGLVzYGdLUTuf", t:"Carnet de identificación", d:"Identidad interna", type:"marca"}
+];
+const LABEL = {video:"Reel", carrusel:"Carrusel", grafica:"Gráfica", marca:"Marca"};
+
+const grid = document.getElementById("grid");
+grid.innerHTML = ITEMS.map((it, i) => `
+  <button class="item" data-type="${it.type}" data-i="${i}" aria-label="Ver ${it.t}">
+    <div class="thumb">
+      <img src="thumbs/${it.id}.jpg" alt="${it.t}" loading="lazy">
+      <span class="badge">${LABEL[it.type]}</span>
+      ${(it.type === "video" || it.video) ? '<div class="play"><i></i></div>' : ""}
+    </div>
+    <div class="info"><h3>${it.t}</h3><p>${it.d}</p></div>
+  </button>`).join("");
+
+document.querySelectorAll("[data-count]").forEach(el => {
+  el.textContent = ITEMS.filter(x => x.type === el.dataset.count).length;
+});
+
+document.querySelectorAll(".filters button").forEach(b => b.addEventListener("click", () => {
+  document.querySelectorAll(".filters button").forEach(x => x.classList.toggle("on", x === b));
+  const f = b.dataset.f;
+  grid.querySelectorAll(".item").forEach(el => el.classList.toggle("hide", f !== "all" && el.dataset.type !== f));
+}));
+
+const dlg = document.getElementById("viewer"), vf = document.getElementById("vf");
+grid.addEventListener("click", e => {
+  const el = e.target.closest(".item"); if (!el) return;
+  const it = ITEMS[el.dataset.i];
+  document.getElementById("vt").innerHTML = `${it.t}<small>${it.d}</small>`;
+  document.getElementById("vd").href = `https://drive.google.com/file/d/${it.id}/view`;
+  vf.className = "frame" + (it.type === "video" ? " vertical" : "");
+  vf.innerHTML = `<iframe src="https://drive.google.com/file/d/${it.id}/preview" allow="autoplay; fullscreen" allowfullscreen title="${it.t}"></iframe>`;
+  dlg.showModal();
+});
+const close = () => dlg.close();
+document.getElementById("vc").addEventListener("click", close);
+dlg.addEventListener("click", e => { if (e.target.classList.contains("viewer") || e.target === vf) close(); });
+dlg.addEventListener("close", () => { vf.innerHTML = ""; });
+document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
